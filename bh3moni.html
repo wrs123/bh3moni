@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>bh3moni Beta1.07</title>
+	<link rel="stylesheet" type="text/css" href="./css/animate.min.css">
+	<link rel="stylesheet" type="text/css" href="./css/bh3moni.css">
+	<link rel="stylesheet" type="text/css" href="./css/recharge.css">
+	<link rel="stylesheet" type="text/css" href="./css/box.css">
+	<link rel="stylesheet" type="text/css" href="./css/custom.css">
+
+</head>
+<body>
+	<input type="hidden"  id="value"/>
+	<input type="hidden"  id="rmbcost"/>
+	<input type="hidden" id="is" value="28000">
+	<div class="bh3_body">
+		<ul class="title">
+			<li class="ice">
+				<div class="ice_pic"></div>
+				<div class="textShow">拥有</div>
+				<div id="ice_text" class="text" style="float:none; margin-right: 0;"></div>
+				<div class="ice_add"></div>
+			</li>
+			<li class="ice">
+				<div class="ice_pic"></div>
+				<div class="textShow">花费</div>
+				<div id="iceCost" class="text"></div>
+			</li>
+			<li class="cost">
+				<div class="cost_pic"></div>
+				<div class="textShow textshow">RMB</div>
+				<div id="cost_text" class="text"></div>
+			</li>
+			<li id="refesh">
+				<div class="refesh_img"></div>
+				<div class="refesh_font">刷新</div>
+			</li>
+		</ul>
+		<div id="custom">
+			<div class="custom_img"></div>
+			<div class="custom_text">概率自定义</div>
+		</div>
+		<div class="setting">
+			<div class="setting_img"></div>
+			<div class="setting_text">设置</div>
+		</div>
+		<div id="index_click">
+			<div class="click_img"></div>
+			<div class="click_text">补给记录</div>
+		</div>
+		<div id="custom_content"></div>
+		<div id="dis">
+			<div class="index_title">
+				<span>补给记录</span>
+				<span id="back">返回补给</span>
+			</div>
+			<ul id="index"></ul>
+			<div class="page_body">
+				<div id="pre"><</div>
+				<ul id="page"></ul>
+				<div id="next">></div>
+			</div>
+		</div>
+		<div class="recharge_Body">
+			<ul class="lineOne line">
+				<li id="label1" class="label">
+					<div class="ice_point ice_point1"></div>
+					<div class="lineBI">
+						<div class="lineBI_img"></div>
+						<div class="lineBI_text">x&nbsp;60</div>
+					</div>
+					<div class="lineBT">¥6.00</div>
+				</li>
+				<li id="label2" class="label">
+					<div class="ice_point ice_point2"></div>
+					<div class="lineBI">
+						<div class="lineBI_img"></div>
+						<div class="lineBI_text">x&nbsp;300</div>
+					</div>
+					<div class="lineBT">¥30.00</div>
+				</li>
+				<li id="label3" class="label">
+					<div class="ice_point ice_point3"></div>
+					<div class="lineBI">
+						<div class="lineBI_img"></div>
+						<div class="lineBI_text">x&nbsp;1280</div>
+					</div>
+					<div class="lineBT">¥128.00</div>
+				</li>
+				<li id="label4" class="label">
+					<div class="ice_point ice_point4"></div>
+					<div class="lineBI">
+						<div class="lineBI_img"></div>
+						<div class="lineBI_text">x&nbsp;3280</div>
+					</div>
+					<div class="lineBT">¥328.00</div>
+				</li>
+			</ul>
+			<ul class="lineTwo line">
+				<li id="label5" class="label">
+					<div class="ice_point ice_point5"></div>
+					<div class="lineBI">
+						<div class="lineBI_img"></div>
+						<div class="lineBI_text">x&nbsp;6480</div>
+					</div>
+					<div  class="lineBT">¥648.00</div>
+				</li>
+				<li id="label6" class="label">
+					<div class="ice_point ice_point6">施工中</div>
+					<div class="lineBI">
+						<div class="lineBI_img"></div>
+						<div class="lineBI_text">x&nbsp;???</div>
+					</div>
+					<div  class="lineBT BT BT6" >捐赠开发者</div>
+				</li>
+				<li class="label" id="label7">
+					<div style="font-size: 50px; font-family: '微软雅黑'; font-weight: bold; color: #FFF;  margin-top:230px;  user-select: none;">返回补给</div>
+				</li>
+			</ul>
+			<div class="foot">
+				<div id="foot_text">确定要白嫖<span id="iceby"></span>水晶大礼包？</div>
+				<div id="foot_button">嫖个爽&nbsp;&nbsp;&nbsp;&nbsp;rua!</div>
+			</div>
+		</div>
+		<div id="bg_pic"></div>
+		<table style=" margin-top: 55px; display: none;" id="content">
+			<tr class="line line_one">
+				<th id="moudle1" class="moudle">
+					<div class="card_img">
+						<div class="card_pic cp1">
+							<div  id="card_pic1" class="cardPic"></div>
+						</div>
+					</div>
+					<div class="card_text">x1</div>
+				</th>
+				<th id="moudle2" class="moudle">
+					<div class="card_img">
+						<div class="card_pic cp2">
+							<div id="card_pic2" class="cardPic"></div>
+						</div>
+					</div>
+					<div class="card_text">x1</div>
+				</th>
+				<th id="moudle3" class="moudle">
+					<div class="card_img">
+						<div class="card_pic cp3">
+							<div class="cardPic" id="card_pic3"></div>
+						</div>
+					</div>
+					<div class="card_text">x1</div>
+				</th>
+				<th id="moudle4" class="moudle">
+					<div class="card_img">
+						<div class="card_pic cp4">
+							<div class="cardPic" id="card_pic4"></div>
+						</div>
+					</div>
+					<div class="card_text">x1</div>
+				</th>
+				<th id="moudle5" class="moudle">
+					<div class="card_img">
+						<div class="card_pic cp5">
+							<div class="cardPic" id="card_pic5"></div>
+						</div>
+					</div>
+					<div class="card_text">x1</div>
+				</th>
+				<th id="moudle6" class="moudle">
+					<div class="card_img">
+						<div class="card_pic cp6">
+							<div class="cardPic" id="card_pic6"></div>
+						</div>
+					</div>
+					<div class="card_text">x1</div>
+				</th>
+			</tr>
+			<tr class="line line_two">
+				<th id="moudle7" class="moudle">
+					<div class="card_img">
+						<div class="card_pic cp7">
+							<div class="cardPic" id="card_pic7"></div>
+						</div>
+					</div>
+					<div class="card_text">x1</div>
+				</th>
+				<th id="moudle8" class="moudle">
+					<div class="card_img">
+						<div class="card_pic cp8">
+							<div class="cardPic" id="card_pic8"></div>
+						</div>
+					</div>
+					<div class="card_text">x1</div>
+				</th>
+				<th id="moudle9" class="moudle">
+					<div class="card_img">
+						<div class="card_pic cp9">
+							<div class="cardPic" id="card_pic9"></div>
+						</div>
+					</div>
+					<div class="card_text">x1</div>
+				</th>
+				<th id="moudle10" class="moudle">
+					<div class="card_img">
+						<div class="card_pic cp10">
+							<div class="cardPic" id="card_pic10"></div>
+						</div>
+					</div>
+					<div class="card_text">x1</div>
+				</th>
+				<th id="moudle11" class="moudle">
+					<div class="card_img">
+						<div class="card_pic">demo</div>
+					</div>
+					<div class="card_text">xn</div>
+				</th>
+				<th id="moudle12">
+					<div class="card_img">
+						<div class="card_pic">demo</div>
+					</div>
+					<div class="card_text">xn</div>
+				</th>
+			</tr>
+			<tr class="line line_three">
+				<th id="moudle13">
+					<div class="card_img">
+						<div class="card_pic">demo</div>
+					</div>
+					<div class="card_text">xn</div>
+				</th>
+				<th id="moudle14">
+					<div class="card_img">
+						<div class="card_pic">demo</div>
+					</div>
+					<div class="card_text">xn</div>
+				</th>
+				<th id="moudle15">
+					<div class="card_img">
+						<div class="card_pic">demo</div>
+					</div>
+					<div class="card_text">xn</div>
+				</th>
+				<th id="moudle16">
+					<div class="card_img">
+						<div class="card_pic">demo</div>
+					</div>
+					<div class="card_text">xn</div>
+				</th>
+				<th id="moudle17">
+					<div class="card_img">
+						<div class="card_pic">demo</div>
+					</div>
+					<div class="card_text">xn</div>
+				</th>
+				<th id="moudle18">
+					<div class="card_img">
+						<div class="card_pic">demo</div>
+					</div>
+					<div class="card_text">xn</div>
+				</th>
+			</tr>
+			<tr class="line line_four">
+				<th id="moudle19">
+					<div class="card_img">
+						<div class="card_pic">demo</div>
+					</div>
+					<div class="card_text">xn</div>
+				</th>
+				<th id="moudle20">
+					<div class="card_img">
+						<div class="card_pic">demo</div>
+					</div>
+					<div class="card_text">xn</div>
+				</th>
+				<th id="moudle21">
+					<div class="card_img">
+						<div class="card_pic">demo</div>
+					</div>
+					<div class="card_text">xn</div>
+				</th>
+				<th id="moudle22">
+					<div class="card_img">
+						<div class="card_pic">demo</div>
+					</div>
+					<div class="card_text">xn</div>
+				</th>
+				<th id="moudle23">
+					<div class="card_img">
+						<div class="card_pic">demo</div>
+					</div>
+					<div class="card_text">xn</div>
+				</th>
+				<th id="moudle24">
+					<div class="card_img">
+						<div class="card_pic">demo</div>
+					</div>
+					<div class="card_text">xn</div>
+				</th>
+			</tr>
+		</table>
+		<ul class="bh3_button" id="bh3_button">
+			<li class="button_one" data-method="offset">
+				<div class="text1">
+					<div class="point_top">
+						<div class="point point_one"></div>
+						<div class=" point point_two"></div>
+					</div>
+					<span>补给获得物品数</span>
+				</div>
+				<div class="text2">
+					<div></div>
+					<span>x&nbsp;2</span>
+				</div>
+				<div class="text3">
+					<span>可获得物品：女武神或2-4星装备、材料</span>
+				</div>
+				<div class="button_onet" id="button_one">
+					<span class="button_text">一回补给</span>
+					<div class="button_pic">
+						<div class="button_img"></div>
+						<span class="button_text1">x1</span>
+					</div>
+				</div>
+				<div class="point_bottom">
+					<div class=" point point_three"></div>
+					<div class=" point point_four"></div>
+				</div>
+			</li>
+			<li class="button_ten"  data-method="offset">
+				<div class="text1">
+					<div class="point_top">
+						<div class="point1 point_one1"></div>
+						<div class=" point1 point_two1"></div>
+					</div>
+					<span>补给获得物品数</span>
+				</div>
+				<div class="text2">
+					<div></div>
+					<span>x&nbsp;20</span>
+				</div>
+				<div class="text3">
+					<span>可获得物品：女武神或2-4星装备、材料</span>
+				</div>
+				<div class="button_onet" id="button_ten">
+					<span class="button_text">十回补给</span>
+					<div class="button_pic">
+						<div class="button_img"></div>
+						<span class="button_text1">x10</span>
+					</div>
+				</div>
+				<div class="point_bottom">
+					<div class=" point1 point_three1"></div>
+					<div class=" point1 point_four1"></div>
+				</div>
+			</li>
+		</ul>
+	</div>
+	<script type="text/javascript" src="./js/jquery-3.2.1.min.js"></script>
+	<script type="text/javascript" src="./js/custom.js"></script>
+	<script type="text/javascript" src="./js/bh3moni.js"></script>
+	<script type="text/javascript" src="./js/recharge.js"></script>
+</body>
+</html>
